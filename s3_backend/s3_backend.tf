@@ -6,6 +6,10 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-2"
+}
+
 resource "random_uuid" "randomid" {}
 
 resource "aws_s3_bucket" "terraform_state" {
@@ -28,4 +32,8 @@ resource "aws_s3_bucket" "terraform_state" {
 
 output "s3_bucket_name" {
   value = aws_s3_bucket.terraform_state.bucket
+}
+
+output "random_var" {
+  value = random_uuid.randomid
 }

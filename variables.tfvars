@@ -1,4 +1,4 @@
-region = "us-east-1"
-user = "circleci-user"
+region = "us-east-2"
+user = "user55"
 label = "hashicorp.fun"
-app = "terramino"
+app = "terrass"
